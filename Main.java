@@ -29,17 +29,17 @@ public class Main {
 				case "1":
 					System.out.print("E-Mail: ");
 					option = scn.next();
-					System.out.println(option.matching(emailRegex) ? "Valid" : "Invalid");
+					System.out.println(option.matches(emailRegex) ? "Valid" : "Invalid");
 					break;
 				case "2":
 					System.out.print("Phone number: ");
 					option = scn.next();
-					System.out.println(option.matching(phoneNumberWithPlusRegex) || option.matching(phoneNumberWithZeroRegex) ? "Valid" : "Invalid");
+					System.out.println(option.matches(phoneNumberWithPlusRegex) || option.matches(phoneNumberWithZeroRegex) ? "Valid" : "Invalid");
 					break;
 				case "3":
 					System.out.print(String.format("Full name(%d to %d names): ", namesMinCount, namesMaxCount));
 					option = scn.next();
-					System.out.println(option.matching(fullNameRegex) ? "Valid" : "Invalid");
+					System.out.println(option.matches(fullNameRegex) ? "Valid" : "Invalid");
 					break;
 				default:
 					System.out.println("Invalid option");
