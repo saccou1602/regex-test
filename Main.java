@@ -6,15 +6,15 @@ public class Main {
 		String option;
 		
 		String emailRegex = "^[a-zA-Z0-9.-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]+$";
-		String phoneNumberWithPlusRegex = "^\\+\\d{1,3}\\s\\d{3}(\\s.-)\\d{4}\\1\\d{3}$";
-		String phoneNumberWithZeroRegex = "^0\\s\\d{1,3}\\s\\d{3}(\\s.-)\\d{4}\\1\\d{3}$";
+		String phoneNumberWithPlusRegex = "^\\+\\d{1,3}\\s?\\d{3}(\\s|.|-|)\\d{4}\\1\\d{3}$";
+		String phoneNumberWithZeroRegex = "^0\\s?\\d{3}(\\s|.|-|)\\d{4}\\1\\d{3}$";
 		final int namesMinCount = 1;
 		final int namesMaxCount = 3;
 		String fullNameRegex = String.format("^(\\b\\w{2,}\\b){%d,%d}$",
 						     namesMinCount,
 						     namesMaxCount);
 		
-		while (option != "0") {
+		while (true) {
 			System.out.println("0 - Exit");
 			System.out.println("1 - E-Mail");
 			System.out.println("2 - Phone number");
