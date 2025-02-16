@@ -1,13 +1,13 @@
 import java.util.Scanner;
 
 public class Main {
-	public static void Main() {
+	public static void main(String[] args) {
 		Scanner scn = new Scanner(System.in);
 		String option;
 		
 		String emailRegex = "^[a-zA-Z0-9.-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]+$";
 		String phoneNumberWithPlusRegex = "^\\+\\d{1,3}\\s\\d{3}(\\s.-)\\d{4}\\1\\d{3}$";
-		String pnoneNumberWithZeroRegex = "^0\\s\\d{1,3}\\s\\d{3}(\\s.-)\\d{4}\\1\\d{3}$";
+		String phoneNumberWithZeroRegex = "^0\\s\\d{1,3}\\s\\d{3}(\\s.-)\\d{4}\\1\\d{3}$";
 		final int namesMinCount = 1;
 		final int namesMaxCount = 3;
 		String fullNameRegex = String.format("^(\\b\\w{2,}\\b){%d,%d}$",
